@@ -53,7 +53,7 @@ export default class Body extends React.Component {
     render() {
         return (
             <main>
-                <form className="container" onSubmit={(e) => this.handleSubmit(e)}>
+                <form className="container" id="#overlay" onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input name="username" value={this.state.username}

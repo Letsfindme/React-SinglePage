@@ -17,42 +17,47 @@ export default class Users extends React.Component {
 
 
     render() {
-        console.log(this.state.users);
         const list = [
             {
                 id: 'a',
                 firstname: 'React',
                 lastname: 'Wieruch',
                 year: 1988,
+                isAdmin: false
             },
             {
                 id: 'b',
                 firstname: 'Angu',
                 lastname: 'Davidds',
                 year: 1990,
+                isAdmin: false
             },
             {
                 id: 'c',
                 firstname: 'Parcel',
                 lastname: 'Marco',
                 year: 1990,
+                isAdmin: false
             },
+            {
+                id: 'd',
+                firstname: 'Parcel',
+                lastname: 'Marco',
+                year: 1990,
+                isAdmin: false
+            },
+            {
+                id: 'f',
+                firstname: 'Parcel',
+                lastname: 'Marco',
+                year: 1990,
+                isAdmin: true
+            }
         ];
-
 
         return (
             <div>
-
-                {/* {SimpleList()} */}
                 <h3>Liset des utilisateurs</h3>
-                {/* {list.map(item => (
-                    <li key={item.id}>
-                        <div>{item.id}</div>
-                        <div>{item.firstname}</div>
-                        <div>{item.lastname}</div>
-                        <div>{item.year}</div>
-                    </li>
-                ))} */}
                 <User 
                 list={list}/>
             </div>

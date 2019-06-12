@@ -3,13 +3,22 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    
+    margin: 10px;
 }
-.user-list-element ul:first-child {
+
+.user-list-element ul {
     list-style:none;
     padding: 1vw;
-    /* border-bottom: #343A40 solid; */
 }
+
+.user-list-element  li:first-child {
+    border-bottom: #343A40 solid;
+}
+
 .user-list-element{
     border: 1px solid #343A40;
+}
+
+.Admin{
+    background-color: darkorange;
 }
