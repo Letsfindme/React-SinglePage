@@ -3,7 +3,13 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    
 }
-ul {
+.user-list-element ul:first-child {
     list-style:none;
+    padding: 1vw;
+    /* border-bottom: #343A40 solid; */
+}
+.user-list-element{
+    border: 1px solid #343A40;
 }
