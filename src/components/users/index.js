@@ -23,35 +23,40 @@ export default class Users extends React.Component {
                 firstname: 'React',
                 lastname: 'Wieruch',
                 year: 1988,
-                isAdmin: false
+                isAdmin: false,
+                role: 'Guest'
             },
             {
                 id: 'b',
                 firstname: 'Angu',
                 lastname: 'Davidds',
                 year: 1990,
-                isAdmin: false
+                isAdmin: false,
+                role: 'Guest'
             },
             {
                 id: 'c',
                 firstname: 'Parcel',
                 lastname: 'Marco',
                 year: 1990,
-                isAdmin: false
+                isAdmin: false,
+                role: 'Guest'
             },
             {
                 id: 'd',
                 firstname: 'Parcel',
                 lastname: 'Marco',
                 year: 1990,
-                isAdmin: false
+                isAdmin: false,
+                role: 'Admin'
             },
             {
                 id: 'f',
                 firstname: 'Parcel',
                 lastname: 'Marco',
                 year: 1990,
-                isAdmin: true
+                isAdmin: true,
+                role: 'Guest'
             }
         ];
 
