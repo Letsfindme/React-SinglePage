@@ -39,6 +39,53 @@ export default class Users extends React.Component {
         }
     }
 
+
+    handleClick(user) {
+
+        console.log(this.state.users);
+
+        let newUserState = this.state.users.slice().map(stateUser => {
+            stateUser.superUser = false
+            if (user.email === stateUser.email) {
+                stateUser.superUser = true;
+            }
+
+            return stateUser
+        })
+
+        this.setState({
+            users: newUserState
+        })
+
+    }
+
+
+
+
+
+
+    // handleClick(e, user) {
+    //     console.log(e.target);  
+    //     console.log('user clicked', user);
+
+    //     let userState = this.state.users;
+
+    //     let newUserState = this.state.users.map(stateUser => {
+
+    //         stateUser.superUser = false;
+    //         if (stateUser.email === user.email) {
+    //             console.log('same user :', stateUser.email)
+    //             stateUser.superUser = true;
+    //         }
+    //         return stateUser
+    //     })
+    //     console.log('new users state :', newUserState);
+
+    //     this.setState({
+    //         users:newUserState
+    //     })
+    // }
+
     render() {
 
         let UsersList = this.state.users.map((user, index) => {
@@ -79,6 +126,7 @@ export default class Users extends React.Component {
                     email={user.email}
                     role={user.role}
                     superUser={user.superUser}
+                    handleClick={() => this.handleClick(user)}
                 />
             )
         })
@@ -93,15 +141,10 @@ export default class Users extends React.Component {
                     email={user.email}
                     role={user.role}
                     superUser={user.superUser}
+                    handleClick={() => this.handleClick(user)}
                 />
             )
         })
-
-        console.log('admin users :', adminUsers);
-        console.log('guest users :', guestUsers);
-
-        console.log('super user :', superUser);
-
         return (
             <section>
                 <h3>Liste des utilisateurs :</h3>

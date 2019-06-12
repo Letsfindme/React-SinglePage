@@ -8,15 +8,16 @@ export default function (props) {
     const SimpleList = (showList) => (
         <div className="user-list">
             {showList.map((item, key) => {
-                if (!item.isAdmin) {
-                    return <div key={key } className="user-list-element">
+                if (!item.superUser) {
+                    return <div key={key} className="user-list-element">
                         <ul>
                             <li>{item.id}</li>
                             <li>{item.firstname}</li>
                             <li>{item.lastname}</li>
                             <li>{item.year}</li>
                         </ul>
-                        <button>إكبس هان</button>
+                        <button className="btn btn-primary" 
+                        onClick={() => props.handleClick(item)}>إكبس هان</button>
                     </div>;
                 }
             })}
@@ -25,18 +26,18 @@ export default function (props) {
 
     const showAdmin = (userList) => (
         <div>{userList.map((item, key) => {
-            if (item.isAdmin) {
+            if (item.superUser) {
                 return (
-                <div key={key + item.id+1} className="user-list-element Admin">
-                    <ul >
-                        <li>ياخي شي جميل I'm Admin {item.id}</li>
-                        <li>{item.firstname}</li>
-                        <li>{item.lastname}</li>
-                        <li>{item.year}</li>
-                        <li>Admin: {item.isAdmin.toString()}</li>
-                    </ul>
-                </div>
-)
+                    <div key={key + item.id + 1} className="user-list-element Admin">
+                        <ul >
+                            <li>ياخي شي جميل I'm Admin {item.id}</li>
+                            <li>{item.firstname}</li>
+                            <li>{item.lastname}</li>
+                            <li>{item.year}</li>
+                            <li>Admin: {item.superUser.toString()}</li>
+                        </ul>
+                    </div>
+                )
             }
         })}
         </div>
@@ -48,10 +49,8 @@ export default function (props) {
     })
 
     adminUsers = adminUsers.map((user, key) => {
-        console.log('heeelo');
-        
         return (
-            <div key={key + user.id+2} className="user-list-element Admin">
+            <div key={key + user.id + 2} className="user-list-element Admin">
                 <ul >
                     <li>Admin ياخي الفلتر جميل  {user.id}</li>
                     <li>{user.firstname}</li>
@@ -62,8 +61,6 @@ export default function (props) {
             </div>
         )
     })
-
-
 
     return (
         <div>
