@@ -1,0 +1,8 @@
+.player{
+    background-color: #3498db;
+    margin: 10px;
+}
+
+.player li{
+    list-style-type: none;
+}

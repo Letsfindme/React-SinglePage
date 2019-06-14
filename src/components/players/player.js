@@ -1,4 +1,5 @@
 import React from 'react'
+import './player.css'
 
 export default class Player extends React.Component {
 
@@ -10,7 +11,7 @@ export default class Player extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="player">
                 <p>Player: {this.props.name}</p>
                 <p>Poste: {this.props.poste}</p>
                 <p>{this.props.name} a {this.props.age} ans</p>
@@ -24,17 +25,20 @@ export default class Player extends React.Component {
                     {this.props.isPermanent && <span> est titulaire</span>}
                     {!this.props.isPermanent && <span> n'est pas titulaire</span>}
                 </p>
-                <p>
+                <div>
                     {this.props.name} a joué pour :
                     <ul>
-                        {this.props.teams.map((team) => {
-                            return (
-                                <li>{team}</li>
-                            )
-                        })}
+                        {
+                            this.props.teams &&
+                            this.props.teams.map((team, index) => {
+                                return (
+                                    <li key={index}>{team}</li>
+                                )
+                            })
+                        }
                     </ul>
 
-                </p>
+                </div>
             </div>
         )
     }
