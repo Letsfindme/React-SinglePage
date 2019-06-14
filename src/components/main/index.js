@@ -1,6 +1,9 @@
 import React from 'react';
+
 import Users from '../users/'
+import Qusers from '../qUsers/'
 import './main.css';
+import Players from "../players";
 
 export default class Body extends React.Component {
     constructor(props) {
@@ -53,7 +56,10 @@ export default class Body extends React.Component {
     render() {
         return (
             <main>
-                <form className="container" id="#overlay" onSubmit={(e) => this.handleSubmit(e)}>
+
+                <Players date={"Vendredi"}/>
+
+                {/*<form className="container" id="#overlay" onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input name="username" value={this.state.username}
@@ -68,7 +74,9 @@ export default class Body extends React.Component {
                     <button className="btn btn-primary">Login</button>
                     {this.state.submitted &&<div class="loader"><p>Loading...</p></div> }
                 </form>
+
                 <Users />
+                <Qusers />*/}
             </main>
         )
     }

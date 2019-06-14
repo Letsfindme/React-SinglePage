@@ -60,10 +60,6 @@ export default class Users extends React.Component {
     }
 
 
-
-
-
-
     // handleClick(e, user) {
     //     console.log(e.target);  
     //     console.log('user clicked', user);
