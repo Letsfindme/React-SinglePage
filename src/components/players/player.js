@@ -32,7 +32,7 @@ export default class Player extends React.Component {
                             this.props.teams &&
                             this.props.teams.map((team, index) => {
                                 return (
-                                    <li key={index}>{team}</li>
+                                    <li className="team-name" key={index}>{team}</li>
                                 )
                             })
                         }

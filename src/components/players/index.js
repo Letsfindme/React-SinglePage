@@ -49,9 +49,10 @@ export default class Players extends React.Component {
                 <h1>Vive le footbal féminin</h1>
                 <h1>Nous somme {this.props.date}</h1>
                 {
-                    this.state.players.map((player) => {
+                    this.state.players.map((player, index) => {
 
                         return (<Player
+                            key={index}
                             name={player.name}
                             poste={player.post}
                             age={player.age}

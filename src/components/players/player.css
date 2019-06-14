@@ -6,3 +6,8 @@
 .player li{
     list-style-type: none;
 }
+
+.team-name{
+    margin-left: 20vw;
+    background-color: aquamarine;
+}

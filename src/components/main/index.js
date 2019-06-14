@@ -4,6 +4,7 @@ import Users from '../users/'
 import Qusers from '../qUsers/'
 import './main.css';
 import Players from "../players";
+import Starwars from "../starwars";
 
 export default class Body extends React.Component {
     constructor(props) {
@@ -57,6 +58,7 @@ export default class Body extends React.Component {
         return (
             <main>
 
+                <Starwars/>
                 <Players date={"Vendredi"}/>
 
                 {/*<form className="container" id="#overlay" onSubmit={(e) => this.handleSubmit(e)}>
